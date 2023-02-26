@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import Varos from './varos.entity';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { AppService } from './app.service';
       password: process.env.DB_PASSWORD || '',
       database: process.env.DB_DATABASE || 'database',
       entities: [
-        /* List of entities here */
+        Varos
       ],
       synchronize: true,
     }),
