@@ -25,7 +25,7 @@ export class AppController {
   async getAllVaros(){
     const varosRepo = this.dataSource.getRepository(Varos)
     let varosok = await varosRepo.find()
-    return varosRepo.find()
+    return {varosok:varosok}
   }
 
   @Delete('/varos/:id')
