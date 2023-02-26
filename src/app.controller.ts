@@ -24,6 +24,7 @@ export class AppController {
   @Get('/varos')
   async getAllVaros(){
     const varosRepo = this.dataSource.getRepository(Varos)
+    let varosok = await varosRepo.find()
     return varosRepo.find()
   }
 
